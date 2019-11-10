@@ -190,9 +190,10 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
 */
 function getFullNames(runners) {
   let fullNames = []
-  for (let i = 0; i < runners.length; i++) {
-    fullNames.push(`${runners[i].last_name}, ${runners[i].first_name}`)
-  }
+  runners.forEach(runner => {
+    fullNames.push(`${runner.last_name}, ${runner.first_name}`)
+  })
+  
   return fullNames
 }
 
